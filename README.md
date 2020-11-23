@@ -49,7 +49,7 @@ public class HomeController : Controller
     {
         ViewData["Message"] = "ASP.NET Core mvc send email example";
 
-        _EmailService.Send("xxxx@gmail.com", "ASP.NET Core mvc send email example", "Send from asp.net core mvc action");
+        _EmailService.Send("xxxxx@gmail.com", "Email Subject", "Email Body");
 
         return View();
     }
@@ -76,8 +76,8 @@ var provider = new MailKitProvider(options);
 var emailService = new EmailService(provider);
 
 // Async
-await emailService.SendAsync("firstname.lastname@gmail.com", "Test email", "This is a test email").ConfigureAwait(false);
+await emailService.SendAsync("xxxxx@gmail.com", "Email Subject", "Email Body").ConfigureAwait(false);
 
 // Sync
-emailService.Send("firstname.lastname@gmail.com", "Test email", "This is a test email");
+emailService.Send("xxxxx@gmail.com", "Email Subject", "Email Body");
 ```
