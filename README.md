@@ -1,6 +1,6 @@
 # Email Library
 
-C# email library using MailKit
+C# email library using MailKit 
 
 Built with
 * .NET 5
